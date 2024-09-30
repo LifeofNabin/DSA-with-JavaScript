@@ -1,0 +1,23 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* aligns horizontally */
+            align-items: center;
+            /* alighns verticallly */
+            height: 100vh;
+            background-color: #949c4d;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: rgb(119, 42, 143);
+            
+        }
+        .highlight{
+            background-color: rgb(204, 231, 204);
+        }
+    
