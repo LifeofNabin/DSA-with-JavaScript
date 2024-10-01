@@ -24,4 +24,4 @@ function minimizeMaxDifference(heights, k) {
 const heights = [3, 7, 8, 10];
 const k = 2; // You can increase/decrease heights by k
 const result = minimizeMaxDifference(heights, k);
-console.log(result); // Output the minimized maximum difference
+console.log(result); 
