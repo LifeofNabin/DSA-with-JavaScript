@@ -6,7 +6,7 @@ Understanding the Array:
 Each index in the array tells you how far you can jump forward. For example, if the array is [2, 3, 1, 1, 4], starting at index 0 (value 2), you can jump to index 1 or 2.
 Greedy Approach:
 
-<!-- The greedy approach focuses on making local optimal choices (jumping to the farthest position possible) at each step, which leads to a globally optimal solution. 
+ The greedy approach focuses on making local optimal choices (jumping to the farthest position possible) at each step, which leads to a globally optimal solution. 
 Instead of trying all possible paths (which could be inefficient), this method calculates how far you can get with the jumps you have made so far.
 Tracking Jumps:
 
@@ -18,7 +18,7 @@ Iterating through the Array:
 
 For each index, calculate how far you can go (farthest = Math.max(farthest, i + arr[i])).
 When you reach currentEnd, increment the jump count and update currentEnd to farthest.
-If currentEnd reaches or exceeds the last index, you can stop early.-->
+If currentEnd reaches or exceeds the last index, you can stop early.
 Example Walkthrough
 Consider the array [2, 3, 1, 1, 4]:
 
