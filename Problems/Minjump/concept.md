@@ -18,7 +18,7 @@ Iterating through the Array:
 
 For each index, calculate how far you can go (farthest = Math.max(farthest, i + arr[i])).
 When you reach currentEnd, increment the jump count and update currentEnd to farthest.
-If currentEnd reaches or exceeds the last index, you can stop early.
+If currentEnd reaches or exceeds the last index, you can stop early.-->
 Example Walkthrough
 Consider the array [2, 3, 1, 1, 4]:
 
@@ -28,4 +28,3 @@ Now at index 1, you’ve made your first jump. Update your currentEnd to 4, whic
 Since you've reached the end in 2 jumps (from 0 to 1 and then from 1 to 4), the minimum jumps required is 2.
 Summary
 The greedy approach efficiently computes the minimum jumps by always aiming to extend your reach to the maximum possible distance at each step. The key is updating the jump count only when you reach the limit of your current jump capacity. This leads to a time-efficient O(n) solution with constant space usage O(1).
--->
