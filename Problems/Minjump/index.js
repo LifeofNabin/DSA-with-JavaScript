@@ -8,8 +8,7 @@ function minJumps(arr) {
   let farthest = 0;
 
   for (let i = 0; i < n - 1; i++) {
-    farthest = Math.max(farthest, i + arr[i]); // Update the farthest point
-
+    farthest = Math.max(farthest, i + arr[i]); // 
     // If we have come to the end of the current jump
     if (i === currentEnd) {
       jumps++; // We need to make a jump
@@ -26,3 +25,4 @@ function minJumps(arr) {
 //Example usage
 const arr = [2, 3, 1, 1, 4];
 console.log(minJumps(arr)); // Output: 2
+
