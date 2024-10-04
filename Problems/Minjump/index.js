@@ -21,7 +21,7 @@ function minJumps(arr) {
   return jumps;
 }
 
-//Example usage
+
 const arr = [2, 3, 1, 1, 4];
 console.log(minJumps(arr)); // Output: 2
 
