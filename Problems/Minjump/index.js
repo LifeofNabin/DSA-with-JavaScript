@@ -14,7 +14,6 @@ function minJumps(arr) {
       jumps++; // We need to make a jump
       currentEnd = farthest; // Update the end for the next jump
 
-      // If we've reached or surpassed the last index, we can stop
       if (currentEnd >= n - 1) break;
     }
   }
