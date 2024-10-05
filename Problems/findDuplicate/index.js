@@ -18,7 +18,7 @@ function findDuplicate(nums) {
         ptr2 = nums[ptr2];
     }
 
-    return ptr1; // or ptr2, they are the same at this point
+    return ptr1; 
 }
 
 // Example usage
