@@ -1,11 +1,3 @@
-// Sample sorted arrays
-const array1 = [1, 3, 5, 7];
-const array2 = [2, 4, 6, 8];
-
-// Display the arrays in the HTML
-document.getElementById("array1").textContent = JSON.stringify(array1);
-document.getElementById("array2").textContent = JSON.stringify(array2);
-
 // Function to merge two sorted arrays
 function mergeSortedArrays(arr1, arr2) {
   const mergedArray = [];
@@ -39,6 +31,21 @@ function mergeSortedArrays(arr1, arr2) {
 
 // Event listener for the merge button
 document.getElementById("mergeButton").addEventListener("click", () => {
+  // Get input values
+  const input1 = document.getElementById("inputArray1").value;
+  const input2 = document.getElementById("inputArray2").value;
+
+  // Convert input strings to arrays of numbers
+  const array1 = input1
+    .split(",")
+    .map(Number)
+    .sort((a, b) => a - b);
+  const array2 = input2
+    .split(",")
+    .map(Number)
+    .sort((a, b) => a - b);
+
+  // Merge the sorted arrays
   const mergedArray = mergeSortedArrays(array1, array2);
   document.getElementById("mergedArray").textContent =
     JSON.stringify(mergedArray);
