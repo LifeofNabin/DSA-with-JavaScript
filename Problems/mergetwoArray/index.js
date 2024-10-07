@@ -20,8 +20,4 @@ function mergeSortedArrays(arr1, m, arr2, n) {
   }
 }
 
-// Example usage
-let arr1 = [1, 3, 5, 0, 0, 0]; // The last three zeros are placeholders
-let arr2 = [2, 4, 6];
-mergeSortedArrays(arr1, 3, arr2, 3);
-console.log(arr1); // Output: [1, 2, 3, 4, 5, 6]
+
