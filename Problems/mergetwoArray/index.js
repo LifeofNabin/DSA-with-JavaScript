@@ -1,26 +1,45 @@
-function mergeSortedArrays(arr1, m, arr2, n) {
-  // Pointer for the last element in arr1
-  let i = m - 1;
-  // Pointer for the last element in arr2
-  let j = n - 1;
-  // Pointer for the last position of the merged array
-  let k = m + n - 1;
+// Sample sorted arrays
+const array1 = [1, 3, 5, 7];
+const array2 = [2, 4, 6, 8];
 
-  while (j >= 0) {
-    // If arr1 is exhausted or the current element in arr2 is greater
-    if (i < 0 || arr2[j] >= arr1[i]) {
-      arr1[k] = arr2[j]; // Place element from arr2 in arr1
-      j--; // Move to the next element in arr2
+// Display the arrays in the HTML
+document.getElementById("array1").textContent = JSON.stringify(array1);
+document.getElementById("array2").textContent = JSON.stringify(array2);
+
+// Function to merge two sorted arrays
+function mergeSortedArrays(arr1, arr2) {
+  const mergedArray = [];
+  let i = 0,
+    j = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      mergedArray.push(arr1[i]);
+      i++;
     } else {
-      arr1[k] = arr1[i]; // Place element from arr1 in arr1
-      i--; // Move to the next element in arr1
+      mergedArray.push(arr2[j]);
+      j++;
     }
-    k--; // Move to the next position in merged array
   }
+
+  // Push remaining elements of arr1 (if any)
+  while (i < arr1.length) {
+    mergedArray.push(arr1[i]);
+    i++;
+  }
+
+  // Push remaining elements of arr2 (if any)
+  while (j < arr2.length) {
+    mergedArray.push(arr2[j]);
+    j++;
+  }
+
+  return mergedArray;
 }
 
-// Example usage
-let arr1 = [1, 3, 5, 0, 0, 0]; // The last three zeros are placeholders
-let arr2 = [2, 4, 6];
-mergeSortedArrays(arr1, 3, arr2, 3);
-console.log(arr1); // Output: [1, 2, 3, 4, 5, 6]
+// Event listener for the merge button
+document.getElementById("mergeButton").addEventListener("click", () => {
+  const mergedArray = mergeSortedArrays(array1, array2);
+  document.getElementById("mergedArray").textContent =
+    JSON.stringify(mergedArray);
+});
