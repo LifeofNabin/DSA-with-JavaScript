@@ -45,8 +45,4 @@ document.getElementById("mergeButton").addEventListener("click", () => {
     .map(Number)
     .sort((a, b) => a - b);
 
-  // Merge the sorted arrays
-  const mergedArray = mergeSortedArrays(array1, array2);
-  document.getElementById("mergedArray").textContent =
-    JSON.stringify(mergedArray);
-});
+  
